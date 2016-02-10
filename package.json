@@ -1,0 +1,97 @@
+{
+  "name": "ol3-my-location",
+  "version": "1.0.0",
+  "description": "Show current location using OL3 built in geolocation API",
+  "main": "dist/index.js",
+  "engines": {
+    "node": ">=4.2.0",
+    "npm": "^3.0.0"
+  },
+  "scripts": {
+    "clean": "rm -rf dist",
+    "compile": "node -r dotenv/config --harmony bin/compile",
+    "lint": "eslint . ./",
+    "lint:fix": "npm run lint -- --fix",
+    "start": "webpack-dev-server  --config build/webpackdev.config.js --inline",
+    "test": "better-npm-run test",
+    "test:dev": "npm run test -- --watch",
+    "deploy": "babel src --presets babel-preset-es2015 --out-dir dist"
+  },
+  "betterScripts": {
+    "dev": {
+      "command": "nodemon -r dotenv/config bin/server",
+      "env": {
+        "NODE_ENV": "development"
+      }
+    },
+    "start": {
+      "command": "node -r dotenv/config bin/server"
+    },
+    "test": {
+      "command": "node -r dotenv/config ./node_modules/karma/bin/karma start bin/karma.js",
+      "env": {
+        "NODE_ENV": "test"
+      }
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davezuko/react-redux-starter-kit.git"
+  },
+  "author": "Jonas Petersson <petersson.jonas@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "openlayers": "^3.13.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.4.5",
+    "babel-core": "^6.3.17",
+    "babel-eslint": "^5.0.0-beta6",
+    "babel-loader": "^6.2.0",
+    "babel-plugin-add-module-exports": "^0.1.1",
+    "babel-plugin-transform-runtime": "^6.4.3",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-preset-react-hmre": "^1.0.0",
+    "babel-preset-stage-0": "^6.3.13",
+    "babel-register": "^6.3.13",
+    "babel-runtime": "^6.3.19",
+    "better-npm-run": "0.0.5",
+    "chai": "^3.4.1",
+    "chai-as-promised": "^5.1.0",
+    "css-loader": "^0.23.0",
+    "cssnano": "^3.3.2",
+    "debug": "^2.2.0",
+    "dotenv": "^1.2.0",
+    "eslint": "^1.10.3",
+    "eslint-config-standard": "^4.4.0",
+    "eslint-config-standard-react": "^1.2.1",
+    "eslint-loader": "^1.1.1",
+    "eslint-plugin-babel": "^3.0.0",
+    "eslint-plugin-react": "^3.14.0",
+    "eslint-plugin-standard": "^1.3.1",
+    "extract-text-webpack-plugin": "^1.0.0",
+    "file-loader": "^0.8.4",
+    "fs": "0.0.2",
+    "fs-extra": "^0.26.3",
+    "html-webpack-plugin": "^1.6.1",
+    "isparta-loader": "^2.0.0",
+    "json-loader": "^0.5.4",
+    "karma": "^0.13.8",
+    "karma-coverage": "^0.5.0",
+    "karma-phantomjs-launcher": "^0.2.1",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-spec-reporter": "0.0.23",
+    "karma-tap": "tmcw-up-for-adoption/karma-tap",
+    "karma-webpack": "^1.7.0",
+    "nodemon": "^1.8.1",
+    "phantomjs": "^1.9.17",
+    "phantomjs-polyfill": "0.0.1",
+    "tape": "^4.4.0",
+    "url-loader": "^0.5.6",
+    "webpack": "1.12.9",
+    "webpack-dev-middleware": "1.4.0",
+    "webpack-hot-middleware": "^2.6.0",
+    "yargs": "^3.32.0"
+  }
+}
