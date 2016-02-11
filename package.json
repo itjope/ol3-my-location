@@ -15,7 +15,8 @@
     "start": "webpack-dev-server  --config build/webpackdev.config.js --inline",
     "test": "better-npm-run test",
     "test:dev": "npm run test -- --watch",
-    "deploy": "babel src --presets babel-preset-es2015 --out-dir dist"
+    "deploy": "babel src --presets babel-preset-es2015 --out-dir dist",
+    "postinstall": "npm run deploy"
   },
   "betterScripts": {
     "dev": {
@@ -40,7 +41,7 @@
   },
   "author": "Jonas Petersson <petersson.jonas@gmail.com>",
   "license": "MIT",
-  "dependencies": {
+  "peerDependencies": {
     "openlayers": "^3.13.0"
   },
   "devDependencies": {
