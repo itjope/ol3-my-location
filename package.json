@@ -37,16 +37,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/davezuko/react-redux-starter-kit.git"
+    "url": "git+https://github.com/itjope/ol3-my-location"
   },
   "author": "Jonas Petersson <petersson.jonas@gmail.com>",
   "license": "MIT",
   "peerDependencies": {
     "openlayers": "^3.13.0"
   },
-  "devDependencies": {
+  "dependencies": {
     "babel-cli": "^6.4.5",
-    "babel-core": "^6.3.17",
+    "babel-core": "^6.3.17"
+  },
+  "devDependencies": {
     "babel-eslint": "^5.0.0-beta6",
     "babel-loader": "^6.2.0",
     "babel-plugin-add-module-exports": "^0.1.1",
