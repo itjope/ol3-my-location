@@ -3,6 +3,8 @@ ol3-my-location
 
 Uses [OpenLayers](http://openlayers.org) geolocation API to display current location and heading.
 
+![screenshot](https://cloud.githubusercontent.com/assets/5778239/13088053/fd539ae0-d4ea-11e5-8fed-7c4d80aa9aa0.png)
+
 Installation
 -----
 `npm install itjope/ol3-my-location`
