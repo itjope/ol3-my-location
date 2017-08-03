@@ -40,12 +40,12 @@ const utils = {
   },
   panToCoord: (map, coord, duration = 300) => {
     let view = map.getView()
-    const pan = ol.animation.pan({
-      duration: duration,
-      source: view.getCenter()
+    let zoom = view.getZoom()
+    view.animate({
+      duration,
+      center: coord,
+      zoom: zoom < 13 ? 13 : zoom
     })
-    view.setCenter(coord)
-    map.beforeRender(pan)
   }
 
 }

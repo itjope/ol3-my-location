@@ -42,7 +42,7 @@
   "author": "Jonas Petersson <petersson.jonas@gmail.com>",
   "license": "MIT",
   "peerDependencies": {
-    "openlayers": "^3.13.0"
+    "openlayers": "^4.0.1"
   },
   "dependencies": {
     "babel-cli": "^6.4.5",
