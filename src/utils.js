@@ -2,7 +2,8 @@ import ol from 'openlayers'
 
 const utils = {
   createOverlay: () => new ol.Overlay({
-    element: document.createElement('div')
+    element: document.createElement('div'),
+    stopEvent: false
   }),
   createAccuracyLayer: (style) => new ol.layer.Vector({
     style: style
