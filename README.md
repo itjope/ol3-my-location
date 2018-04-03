@@ -109,4 +109,4 @@ var location = MyLocation(map)
 location.start()
 ```
 
-* `parcel index.html`
+* `parcel index.html --https`
