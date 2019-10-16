@@ -1,6 +1,6 @@
 {
   "name": "ol3-my-location",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Show current location using OL3 built in geolocation API",
   "main": "dist/index.js",
   "engines": {
@@ -12,7 +12,7 @@
     "compile": "node -r dotenv/config --harmony bin/compile",
     "lint": "eslint . ./",
     "lint:fix": "npm run lint -- --fix",
-    "start": "webpack-dev-server  --config build/webpackdev.config.js --inline",
+    "start": "npx webpack-dev-server  --config build/webpackdev.config.js --inline",
     "test": "better-npm-run test",
     "test:dev": "npm run test -- --watch",
     "deploy": "babel src --presets babel-preset-es2015 --out-dir dist",
@@ -42,7 +42,7 @@
   "author": "Jonas Petersson <petersson.jonas@gmail.com>",
   "license": "MIT",
   "peerDependencies": {
-    "openlayers": "^4.0.1"
+    "openlayers": "^4.2.0"
   },
   "dependencies": {
     "babel-cli": "^6.4.5",
